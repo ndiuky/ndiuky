@@ -1,4 +1,9 @@
 <h1 align="left">Hello there! I'm Farid Tipaev</h1>
+
+<p align="center">
+<img src="https://github-readme-stats.vercel.app/api?username=ndiuky&show_icons=true&title_color=ccc&icon_color=ff811b" />
+</p>
+
 <h2 align="left" id="ndiuky-stack">🔥 Tech stack</h2>
 
 > General
