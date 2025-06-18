@@ -1,0 +1,41 @@
+name: Bump age on birthday
+
+on:
+  schedule:
+    - cron: "0 0 20 2 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bump-age:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Git credentials
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Calculate next hexadecimal age
+        id: bump
+        run: |
+          FILE="README.md"
+          OLD_HEX=$(grep -oP 'public age:\s*number\s*=\s*0x\K[0-9a-fA-F]+' "$FILE")
+          OLD_DEC=$((16#$OLD_HEX))
+          NEW_DEC=$((OLD_DEC + 1))
+          NEW_HEX=$(printf '%x' "$NEW_DEC")
+
+          sed -i "s/public age:\s*number\s*=\s*0x$OLD_HEX/public age: number = 0x$NEW_HEX/" "$FILE"
+
+          echo "old=$OLD_HEX" >> "$GITHUB_OUTPUT"
+          echo "new=$NEW_HEX" >> "$GITHUB_OUTPUT"
+
+      - name: Commit & push
+        if: ${{ steps.bump.outputs.old != steps.bump.outputs.new }}
+        run: |
+          git commit -am "chore: bump age to 0x${{ steps.bump.outputs.new }} 🎂"
+          git push
