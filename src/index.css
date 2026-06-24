@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.03) 0px,
+        rgba(255,255,255,0.03) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+
+    mix-blend-mode: overlay;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+    );
+
+    background-size: 4px 4px;
+    opacity: 0.15;
+}
