@@ -1,2 +1,11 @@
-export { Background } from "./Background/Background";
-export { Autism } from "./Autism/Autism";
+export { default as AnimeCursor } from "./AnimeCursor.vue";
+export { default as BackgroundEffects } from "./BackgroundEffects.vue";
+export { default as ContactPanel } from "./ContactPanel.vue";
+export { default as LiveAge } from "./LiveAge.vue";
+export { default as NotFoundPage } from "./NotFoundPage.vue";
+export { default as ProfileCard } from "./ProfileCard.vue";
+export { default as SiteFooter } from "./SiteFooter.vue";
+export { default as SiteHeader } from "./SiteHeader.vue";
+export { default as StackPanel } from "./StackPanel.vue";
+export { default as TerminalPanel } from "./TerminalPanel.vue";
+export { default as WebringPanel } from "./WebringPanel.vue";
