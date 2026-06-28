@@ -50,7 +50,7 @@ export const contacts: Contact[] = [
     value: "github.com/ndiuky",
     href: "https://github.com/ndiuky",
   },
-  { label: "Telegram", value: "@ndiuky_dev", href: "https://t.me/ndiuky_dev" },
+  { label: "Telegram", value: "@ndiuky", href: "https://t.me/ndiuky" },
   { label: "Discord", value: "@ndiuky_dev", href: "https://discord.com/" },
   {
     label: "Email",
