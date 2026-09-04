@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Информация про Мерлинa Гермеса" />
+  <title>Главная | Блог Мерлина Гермеса</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h3>Merlin Hermes</h3>
+      <nav class="nav">
+        <a href="/">Главная</a>
+        <a href="/articles">Статьи</a>
+        <a href="/posts">Посты</a>
+      </nav>
+    </header>
+
+
+    <main class="main">
+      <div class="heading">
+        <img class="avatar" loading="lazy" src="avatar.webp" alt="">
+        <h1>Привет я <code>Merlin Hermes</code>, но в интернетах известен как
+          <code>ndiuky</code>
+          <span id="info_me"></span>
+        </h1>
+      </div>
+
+      <ul>
+        <li>Телеграмм: <a href="https://ndiuky.t.me" target="_blank" rel="nofollow noreferrer noopener">@ndiuky</a></li>
+        <li>Почта: <a href="mailto:anod100002@gmail.com" target="_blank"
+            rel="nofollow noreferrer noopener">anod100002@gmail.com</a></li>
+        <li>Codeberg: <a href="http://codeberg.org/ndiuky/" target="_blank"
+            rel="nofollow noreferrer noopener">@ndiuky</a></li>
+        <li class="legacy">GitHub (legacy): <a href="https://github.com/ndiuky/" target="_blank"
+            rel="nofollow noreferrer noopener">@ndiuky</a></li>
+      </ul>
+
+      <div>
+        <h2>
+          Кто же я такой?
+        </h2>
+
+        <div>Суперзлодей, Кайфкодер, Мошенник, Ошибка, Безумец, Изобретатель, <span class="churka">Дезигнер</span></div>
+      </div>
+
+
+
+      <div class="tables">
+        <div>
+          <h2>Проекты</h2>
+
+          <ul>
+            <li>Телеграмм-канал (щитпост) «<a href="https://t.me/ndiuky_notes" target="_blank"
+                rel="nofollow noreferrer noopener">𝚗𝚍𝚒𝚞𝚔𝚢</a>».</li>
+            <span class="mudrec">и да пока у меня их нихуя нет...</span>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Род деятельности </h2>
+          <ul>
+            <li>Недо-Игрописец</li>
+            <li>Недо-<span class="churka">Wебщик</span></li>
+            <li>Недо-Ботописец</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tables">
+        <div>
+          <h2>Что я люблю?</h2>
+          <ul>
+            <li>Имбирный чай</li>
+            <li>C++20</li>
+            <li>Оняме</li>
+            <li>Общение</li>
+            <li>Ошибки</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Что я НЕ люблю</h2>
+          <ul>
+            <li>Дебаг по ночам</li>
+            <li>Cargo культы</li>
+            <li>Предвзятости</li>
+            <li>Рутину</li>
+            <li>Вайбкодинг</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <a href="https://webring.otomir23.me/39/prev">предыдущий</a>
+        <div><span>я так же есть в</span> <a href="https://webring.otomir23.me/">webring'е</a></div>
+        <a href="https://webring.otomir23.me/39/next">следующий</a>
+      </div>
+
+      <div class="tables">
+        <div>
+          <span class="mega-symbol">"</span><span id="quote"></span><span class="mega-symbol">"</span><br />
+          <span class="mudrec">- Цитаты великих древних</span>
+        </div>
+        <div class="_88x31">
+          <a href="https://takasaki.moe/">
+            <img src="https://takasaki.moe/88x31.gif" alt="高崎">
+          </a>
+        </div>
+      </div>
+      <div><a href="/donats">Поддержать шизу автора (донат)</a></div>
+    </footer>
+
+  </div>
+  <script src="quotes.js"></script>
+  <script>
+    const date = new Date();
+    const birthDayDate = new Date(2007, 2, 20);
+    const age = date.getFullYear() - birthDayDate.getFullYear()
+
+    info_me.innerText = `и мне ${age} годиков`;
+    quote.innerText = getRandomQuote();
+  </script>
+</body>
+
+</html>
