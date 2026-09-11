@@ -1,7 +1,7 @@
 :root {
-  --bg: #0E1116;
-  --bg-light: #151A21;
-  --text: #E6EAF0;
+  --bg: #0e1116;
+  --bg-light: #151a21;
+  --text: #e6eaf0;
   --border: #484848;
   --primary: #3caa3c;
 }
@@ -58,9 +58,27 @@ html {
   gap: 1rem;
 }
 
-.avatar {
-  height: 200px;
+.avatar_main {
+  position: relative;
   width: 200px;
+  height: 200px;
+  min-width: 200px;
+}
+
+.avatar {
+  position: absolute;
+  top: 3.5px;
+  left: 15px;
+  width: 85%;
+  height: 85%;
+}
+
+.ramka {
+  position: absolute;
+  inset: -15px;
+  z-index: 100;
+  width: 110%;
+  height: 110%;
 }
 
 a,
@@ -146,12 +164,6 @@ h4 {
 
 .main p:has(> img) {
   text-align: center;
-}
-
-.main img {
-  border-radius: 0.5rem;
-  max-width: 100%;
-  transition: 1s;
 }
 
 .main video {
