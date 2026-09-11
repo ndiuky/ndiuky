@@ -217,6 +217,7 @@ summary {
     width: 140px;
     height: 140px;
     min-width: 140px;
+    margin-top: 20px;
   }
 
   .avatar {
